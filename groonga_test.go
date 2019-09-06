@@ -65,3 +65,18 @@ func TestDelete(t *testing.T) {
 
 	log.Println(res)
 }
+
+func TestStatus(t *testing.T) {
+	g := Groonga{
+		Scheme: scheme,
+		Host:   host,
+		Port:   port,
+	}
+
+	res, err := g.Status()
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	log.Println(res)
+}

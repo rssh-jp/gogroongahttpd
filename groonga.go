@@ -52,3 +52,14 @@ func (g *Groonga) Delete(param string) (*http.Response, error) {
 	var c http.Client
 	return c.Do(req)
 }
+
+func (g *Groonga) Status() (*http.Response, error) {
+	requestURL := g.createURLString("status", "")
+	req, err := g.createHTTPRequest("GET", requestURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	var c http.Client
+	return c.Do(req)
+}
