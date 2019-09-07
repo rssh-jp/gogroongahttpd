@@ -1,4 +1,4 @@
-package groonga
+package groongago
 
 import (
 	"bytes"
