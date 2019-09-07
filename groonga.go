@@ -1,4 +1,4 @@
-package groongago
+package gogroongahttpd
 
 import (
 	"fmt"
